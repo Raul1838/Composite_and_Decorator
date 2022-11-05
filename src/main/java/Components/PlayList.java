@@ -18,11 +18,22 @@ public class PlayList implements Playable {
         songs.add(playable);
     }
 
+
     @Override
     public void play() {
         for (Playable song : songs) {
             System.out.println("-----" + name + "-----");
             song.play();
         }
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+
+    public void remove(Playable song) {
+        songs.remove(song);
     }
 }

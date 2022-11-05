@@ -11,8 +11,16 @@ public class Song implements Playable {
         this.artistName = artistName;
     }
 
+
     @Override
     public void play() {
         System.out.println("Escuchando..." + songName + " BY " + artistName);
     }
+
+    @Override
+    public String getName() {
+        return songName;
+    }
+
+
 }
